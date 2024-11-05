@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "Moda feminina | Roupas, Sapatos e Acessórios | SHEIN Brasil";
+    var products = (IEnumerable<Product>?) ViewData["Products"];
+}
+<section>
+    <h2 style="font-family: inherit; font-weight: bold; color: black;font-size: 1rem;text-align: center;margin-top: 10px;">Para você</h2>
+    <div class="d-flex" style="padding: 1rem; gap:10px;flex-wrap: wrap">
+        @foreach (var product in products)
+        {
+            <a href="/Product?id=@product.Id" style="width: 48%;border: none;text-decoration: none;">
+                <div class="card" style="width: 100%;border: none;">
+                    <img class="card-img-top" src="@product.Variations.First().ImageUrl" alt="Card image cap">
+                    <div class="card-body" style="padding: .5rem;">
+                        <div class="d-flex align-items-center justify-content-center" style="gap: .3rem;">
+                            <div style="border: 1px solid red; border-radius: 3px; padding: 2px;color: red;" class="d-flex align-items-center justify-content-center">
+                                <span style="font-size: .5rem">-100%</span>
+                            </div>
+                            <h5 class="card-title text-truncate" style="font-size: .9rem; max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;margin-bottom: 0;font-family: inherit; color: black;">
+                                @product.Name
+                            </h5>
+                        </div>
+                        <div>
+                            <span style="font-size: .6rem; color: rgba(204,110,0)">O estoque esta acabando!</span>
+                            <div class="d-flex align-items-center">
+                                <div style="color: #fa6338;font-weight: bold;margin-right: .3rem;">
+                                    <span style="font-size: 12px;">R$</span>
+                                    <span style="margin-left: -3px;font-size: 1.2rem;">@Decimal.Truncate(@product.Price)</span>
+                                    <span style="margin-left: -5px;">,@((int)((product.Price - @Decimal.Truncate(product.Price)) * 100))</span>
+                                </div>
+                                <img width="15" height="15" src="https://img.ltwebstatic.com/images3_ccc/2024/10/11/b9/17286522857af975d03fc9c84b56f43707c1a8fe65.png" class="sales-label__icon">
+                            </div>
+                            <div>
+                                <span style="color: #666; background-color: #ECFCF3; font-size: .7rem; padding: .2rem;">Envio Nacional</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+        }
+    </div>
+</section>

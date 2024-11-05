@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SheinPrototype", "SheinPrototype\SheinPrototype.csproj", "{50A704E2-1161-4655-8630-2F10984521D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CC9A539E-158B-41E7-8FD6-49752EE7E477}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50A704E2-1161-4655-8630-2F10984521D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50A704E2-1161-4655-8630-2F10984521D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50A704E2-1161-4655-8630-2F10984521D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50A704E2-1161-4655-8630-2F10984521D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
