@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model SheinPrototype.TrackViewModel;
+
+<section style="padding: 14px; display: flex; flex-direction: column; gap: 20px;">
+    <div style="display: @(Model.IsFirstTime ? "block": "none");">
+        <h1 style="color: black; font-size: 1.6rem;text-align: center">Parabens pela sua aquisicao!</h1>
+        <p style="text-align: center;">As suas roupas ja vao chegar! Fique ligado no rastreio abaixo para nao perder as atualizacoes.</p>    
+    </div>
+    <h1 style="font-size: 20px; color: black; font-weight: bold; border-bottom: 1px solid #666666;">@Model.Token</h1>
+    @foreach (var status in Model.Status)
+    {
+        <div style="display: flex; gap: 20px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+            </div>
+            <div>
+                <div style="color: black; font-family: inherit; font-size: 13px;font-weight: bold;">
+                    @status.Day
+                </div>
+                <div style="margin-top: 10px;">
+                    <span>@status.Message</span>
+                </div>
+            </div>
+        </div>
+    }
+</section>

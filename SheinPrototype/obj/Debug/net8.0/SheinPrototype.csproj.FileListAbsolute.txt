@@ -109,3 +109,4 @@ C:\Users\Leonardo Bloise\RiderProjects\SheinPrototype\SheinPrototype\bin\Debug\n
 C:\Users\Leonardo Bloise\RiderProjects\SheinPrototype\SheinPrototype\obj\Debug\net8.0\SheinPrototype.csproj.AssemblyReference.cache
 C:\Users\Leonardo Bloise\RiderProjects\SheinPrototype\SheinPrototype\obj\Debug\net8.0\SheinPro.CED0C96A.Up2Date
 C:\Users\Leonardo Bloise\RiderProjects\SheinPrototype\SheinPrototype\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\Leonardo Bloise\RiderProjects\SheinPrototype\SheinPrototype\obj\Debug\net8.0\SheinPrototype.sourcelink.json

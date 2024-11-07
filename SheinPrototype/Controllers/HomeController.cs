@@ -36,7 +36,7 @@ public class HomeController : Controller
         _setSessionContextIfNeeded();
         var menuList = _categoriesRepository.GetAllCategories();
         var allProducts = _productRepository.GetAll();
-        var cartQtt = _cartRepository.CountItemsBySessionId(HttpContext.Session.Id);
+        var cartQtt = _cartRepository.CountItemsBySessionId(HttpContext);
         ViewData["Products"] = allProducts;
         ViewData["CartQtt"] = cartQtt;
         return View(menuList);

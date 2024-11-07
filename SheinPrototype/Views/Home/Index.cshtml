@@ -25,8 +25,16 @@
                             <div class="d-flex align-items-center">
                                 <div style="color: #fa6338;font-weight: bold;margin-right: .3rem;">
                                     <span style="font-size: 12px;">R$</span>
-                                    <span style="margin-left: -3px;font-size: 1.2rem;">@Decimal.Truncate(@product.Price)</span>
-                                    <span style="margin-left: -5px;">,@((int)((product.Price - @Decimal.Truncate(product.Price)) * 100))</span>
+                                    <span style="margin-left: -3px;font-size: 1.2rem;">0</span>
+                                    <span style="margin-left: -5px;">,00</span>
+                                </div>
+                                <div class="d-flex position-relative align-items-center" style="font-size: 10px;">
+                                    <div class="position-absolute" style="width: 100%; height: 1px; background-color: #fa6338;z-index: 3;"></div>
+                                    <div style="color: #fa6338;font-weight: bold;margin-right: .3rem;z-index: 1;">
+                                        <span style="font-size: 5px;">R$</span>
+                                        <span style="font-size: .5rem;">@Decimal.Truncate(@product.Price)</span>
+                                        <span style="font-size: .5rem;">,@((int)((product.Price - @Decimal.Truncate(product.Price)) * 100))</span>
+                                    </div>
                                 </div>
                                 <img width="15" height="15" src="https://img.ltwebstatic.com/images3_ccc/2024/10/11/b9/17286522857af975d03fc9c84b56f43707c1a8fe65.png" class="sales-label__icon">
                             </div>
@@ -37,7 +45,6 @@
                     </div>
                 </div>
             </a>
-            
         }
     </div>
 </section>

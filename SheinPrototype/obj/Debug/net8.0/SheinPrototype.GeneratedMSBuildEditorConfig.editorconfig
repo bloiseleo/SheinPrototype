@@ -18,6 +18,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Leonardo Bloise\RiderProjects\SheinPrototype\SheinPrototype
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Leonardo Bloise/RiderProjects/SheinPrototype/SheinPrototype/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Leonardo Bloise/RiderProjects/SheinPrototype/SheinPrototype/Views/Cart/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Leonardo Bloise/RiderProjects/SheinPrototype/SheinPrototype/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,6 +36,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Leonardo Bloise/RiderProjects/SheinPrototype/SheinPrototype/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Leonardo Bloise/RiderProjects/SheinPrototype/SheinPrototype/Views/Postcode/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdGNvZGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Leonardo Bloise/RiderProjects/SheinPrototype/SheinPrototype/Views/Postcode/Track.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdGNvZGVcVHJhY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Leonardo Bloise/RiderProjects/SheinPrototype/SheinPrototype/Views/Postcode/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdGNvZGVcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Leonardo Bloise/RiderProjects/SheinPrototype/SheinPrototype/Views/Product/Index.cshtml]

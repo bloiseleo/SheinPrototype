@@ -34,13 +34,7 @@ public class ProductController: Controller
         {
             return NotFound();
         }
-        var cart = new Cart()
-        {
-            Size = dto.Size.ToString(),
-            ProductVariations = variation,
-            SessionId = HttpContext.Session.Id,
-        };
-        _cartRepository.CreateCart(cart);
+        _cartRepository.AddToCart(variation, HttpContext);
         return Redirect($"Home/");
     }
 }
