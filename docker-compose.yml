@@ -1,8 +1,6 @@
 ﻿services:
   app:
-    build:
-      context: .
-      dockerfile: SheinPrototype/Dockerfile
+    image: bloiseleo/shein
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
     depends_on:
