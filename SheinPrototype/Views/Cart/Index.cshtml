@@ -47,7 +47,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0565 2.25V5.94005L16.9274 7.20554V14.5887H14.9346C14.7713 15.2688 14.1592 15.7742 13.429 15.7742C12.6988 15.7742 12.0867 15.2688 11.9234 14.5887L6.76691 14.5887C6.60359 15.2688 5.99146 15.7742 5.26128 15.7742C4.5311 15.7742 3.91897 15.2688 3.75565 14.5887H1.49194V11.4701H2.99194L2.99151 13.0885H11.556V3.75H2.99151V5.7335L6.11291 5.73387V7.23387H1.49194V2.25H13.0565ZM13.0565 7.51812V13.0884H15.4269V8.29294L13.0565 7.51812Z" fill="currentColor"></path>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.98387 9.94354H0.5V8.44354H3.98387V9.94354Z" fill="currentColor"></path>
             </svg>
-            <span style="font-weight: bold;">FRETE ECONOMICO GRATIS</span>
+            <span style="font-weight: bold;">FRETE ECONÔMICO GRÁTIS</span>
         </div>
         <ul style="list-style: none; padding: 14px;height: 250px; overflow-y: scroll;gap: 20px;display: flex;flex-direction: column;">
             @foreach (var item in Model)
@@ -118,7 +118,7 @@
                 ) ? validateOrderResponse.Message: "")</span>
         </div>
         <div style="gap: 12px;display: flex;flex-direction: column;padding: 2px;margin-top: 20px;margin-bottom: 90px;">
-            <h2 style="font-family: inherit;color: black;font-weight: bold;font-size: 18px;"> Endereco </h2>
+            <h2 style="font-family: inherit;color: black;font-weight: bold;font-size: 18px;">Endereço</h2>
             <div>
                 <label for="idCEP">CEP</label>
                 <input id="idCEP" style="width: 100%;border: 1px solid black;text-indent: 10px;outline: none;padding: 5px;" type="text" name="cep" value="@(order != null? order.Cep: "")" placeholder="Digite seu CEP"/>

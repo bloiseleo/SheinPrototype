@@ -20,7 +20,7 @@ public class PostCodeService
             return new TrackViewModel.StatusViewModel()
             {
                 Day = postCode.StartDate.ToString("D", new CultureInfo("pt-BR")).ToUpper(),
-                Message = "Produtos em separacao"
+                Message = "Produtos em separação"
             };
         }},
         {
@@ -34,35 +34,35 @@ public class PostCodeService
             2, (postCode) => new TrackViewModel.StatusViewModel()
             {
                 Day = postCode.StartDate.AddDays(5 * 2).ToString("D", new CultureInfo("pt-BR")).ToUpper(),
-                Message = "O produto foi recebido nas instalacoes da transportadora"
+                Message = "O produto foi recebido nas instalações da transportadora"
             }
         },
         {
             3, (postCode) => new TrackViewModel.StatusViewModel()
             {
                 Day = postCode.StartDate.AddDays(5 * 3).ToString("D", new CultureInfo("pt-BR")).ToUpper(),
-                Message = "O produto saiu das instalacoes da transportadora"
+                Message = "O produto deixou as instalações da transportadora"
             }
         },
         {
             4, (postCode) => new TrackViewModel.StatusViewModel()
             {
                 Day = postCode.StartDate.AddDays(5 * 4).ToString("D", new CultureInfo("pt-BR")).ToUpper(),
-                Message = "O produto esta em rota de entrega para o cliente"
+                Message = "O produto está a caminho de entrega para o cliente"
             }
         },
         {
             5, (postCode) => new TrackViewModel.StatusViewModel()
             {
                 Day = postCode.StartDate.AddDays(5 * 5).ToString("D", new CultureInfo("pt-BR")).ToUpper(),
-                Message = "Oops! Tivemos um problema com a sua entrega! Uma nova tentativa de entrega sera feita"
+                Message = "Oops! Tivemos um problema com a sua entrega. Uma nova tentativa será realizada em breve"
             }
         },
         {
             6, (postCode) => new TrackViewModel.StatusViewModel()
             {
                 Day = postCode.StartDate.AddDays(5 * 6).ToString("D", new CultureInfo("pt-BR")).ToUpper(),
-                Message = "Oops! Tivemos um problema com a sua entrega! Entre em contato com o suporte para saber mais :("
+                Message = "Oops! Tivemos um problema com a sua entrega. Entre em contato com o suporte para mais informações. :("
             }
         }
     };

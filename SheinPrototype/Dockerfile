@@ -20,4 +20,5 @@ RUN dotnet publish "SheinPrototype.csproj" -c $BUILD_CONFIGURATION -o /app/publi
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+ENV ASPNETCORE_ENVIRONMENT=Production
 ENTRYPOINT ["dotnet", "SheinPrototype.dll"]

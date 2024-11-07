@@ -1,5 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using SheinPrototype.Dtos;
+using SheinPrototype.Repositories;
 
 namespace SheinPrototype.Services;
 
@@ -75,6 +76,7 @@ public class OrderValidatorService
 
         return cpf[9] - '0' == firstDigit && cpf[10] - '0' == secondDigit;
     }
+    
     public ValidationResponse? ValidateOrder(CreateOrder order)
     {
         
@@ -84,7 +86,7 @@ public class OrderValidatorService
         }
         if (order.Name.Length < 3)
         {
-            return GenerateValidationResponse("Nome deve ter, ao menos, tres caracteres", "name");
+            return GenerateValidationResponse("O nome deve ter ao menos três caracteres", "name");
         }
         if (order.Telefone == null)
         {
@@ -92,7 +94,7 @@ public class OrderValidatorService
         }
         if (!ValidCellphone(order.Telefone))
         {
-            return GenerateValidationResponse("Telefone deve ser valido", "telefone");
+            return GenerateValidationResponse("Telefone deve ser válido", "telefone");
         }
         if (order.Cpf == null)
         {
@@ -100,7 +102,7 @@ public class OrderValidatorService
         }
         if (!ValidateCPF(order.Cpf))
         {
-            return GenerateValidationResponse("O CPF deve ser valido", "cpf");
+            return GenerateValidationResponse("CPF deve ser válido", "cpf");
         }
         if (order.Cep == null)
         {
@@ -108,7 +110,7 @@ public class OrderValidatorService
         }
         if (!ValidCep(order.Cep))
         {
-            return GenerateValidationResponse("Cep deve ser valido", "cep");
+            return GenerateValidationResponse("CEP deve ser válido", "cep");
         }
         if (order.Logradouro == null)
         {
@@ -116,7 +118,7 @@ public class OrderValidatorService
         }
         if (!ValidLogradouro(order.Logradouro))
         {
-            return GenerateValidationResponse("O Logradouro deve ser valido", "logradouro");
+            return GenerateValidationResponse("Logradouro deve ser válido", "logradouro");
         }
         if (order.Cidade == null)
         {
@@ -124,21 +126,21 @@ public class OrderValidatorService
         }
         if (!ValidCity(order.Cidade))
         {
-            return GenerateValidationResponse("A Cidade deve ser valida", "cidade");
+            return GenerateValidationResponse("Cidade deve ser válida", "cidade");
         }
         if (order.Estado == null)
         {
-            return GenerateValidationResponse("O Estado deve ser preenchido", "estado");
+            return GenerateValidationResponse("Estado deve ser preenchido", "estado");
         }
         if (!ValidState(order.Estado))
         {
-            return GenerateValidationResponse("O Estado deve ter somente dois caracteres", "estado");
+            return GenerateValidationResponse("Estado deve ter apenas dois caracteres", "estado");
         }
-
         if (_postCodeService.AlreadyHasABuy(order.Cpf))
         {
-            return GenerateValidationResponse("Voce ja solicitou suas roupas gratis", "cpf");
+            return GenerateValidationResponse("Você já solicitou suas roupas grátis", "cpf");
         }
+        
         return null;
     }
 }

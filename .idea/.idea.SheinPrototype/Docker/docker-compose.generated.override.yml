@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  app:
+    build:
+      context: "C:\\Users\\Leonardo Bloise\\RiderProjects\\SheinPrototype"
+      dockerfile: "SheinPrototype/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/SheinPrototype.dll"
+    environment:
+      ASPNETCORE_STATICWEBASSETS: "/app/bin/Debug/net8.0/SheinPrototype.staticwebassets.runtime.CT.json"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "sheinprototype:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\Leonardo Bloise\\.nuget\\packages:/home/app/.nuget/packages"
+    - "C:\\Users\\Leonardo Bloise\\RiderProjects\\SheinPrototype\\SheinPrototype:/app:rw"
+    - "C:\\Users\\Leonardo Bloise\\RiderProjects\\SheinPrototype:/src:rw"
+    working_dir: "/app"

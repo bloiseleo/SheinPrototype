@@ -9,4 +9,5 @@ public class CreateOrder
     public string? Logradouro { get; set; }
     public string? Cidade { get; set; }
     public string? Estado { get; set; }
+    public string SessionId { get; set; }
 }

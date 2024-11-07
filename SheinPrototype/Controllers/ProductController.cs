@@ -17,12 +17,27 @@ public class ProductController: Controller
         _cartRepository = cartRepository;
         _productVariationsRepository = productVariationsRepository;
     }
+
+    private bool cartLimitExceeded()
+    {
+        var cart = _cartRepository.GetCartBySessionId(HttpContext);
+        if (cart.Count() < 15)
+        {
+            return false;
+        }
+
+        return true;
+    }
     [HttpGet]
     public IActionResult Index(int id)
     {
         var product = _productRepository.GetProductById(id);
         if (product == null) return NotFound();
         ViewData["Product"] = product;
+        if (cartLimitExceeded())
+        {
+            return Redirect($"/Home?error=true");
+        }
         return View();
     }
 

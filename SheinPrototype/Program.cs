@@ -37,6 +37,8 @@ namespace SheinPrototype
                 options.Cookie.MaxAge = TimeSpan.FromDays(365);
             });
             var app = builder.Build();
+            var logger = app.Services.GetService<ILogger<Program>>();
+            logger.LogInformation($"Starting up using {app.Environment.EnvironmentName}");
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");

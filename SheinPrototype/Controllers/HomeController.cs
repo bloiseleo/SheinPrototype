@@ -31,7 +31,7 @@ public class HomeController : Controller
         }
         HttpContext.Session.Set("SESSION_ID", Encoding.UTF8.GetBytes(HttpContext.Session.Id));
     }
-    public IActionResult Index()
+    public IActionResult Index(bool error = false)
     {
         _setSessionContextIfNeeded();
         var menuList = _categoriesRepository.GetAllCategories();
@@ -39,6 +39,7 @@ public class HomeController : Controller
         var cartQtt = _cartRepository.CountItemsBySessionId(HttpContext);
         ViewData["Products"] = allProducts;
         ViewData["CartQtt"] = cartQtt;
+        ViewData["Error"] = error ? "Voce ja atingiu o limite de produtos que pode escolher" : null;
         return View(menuList);
     }
 
